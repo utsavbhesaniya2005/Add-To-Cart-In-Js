@@ -60,10 +60,11 @@ const viewData = () => {
         `<div class="col-4">
             <div class="card">
                 <div class="image">
-                    <img href="#" src=https://i.pinimg.com/originals/a4/7b/a5/a47ba59b4a353e0928ef0551ca44f980.jpg>
+                    <img src="./assets/images/item-image.jpg">
                 </div>
+                <h3 class="ptitle">Name : ${data.Name}</h3>
                 <div class="content">
-                    <h3 class="my-3">${data.Name}</h3>
+                    <h3 class="mb-3">${data.Name}</h3>
                     <p>${data.Desc}</p>
                     <h5>${data.Category}</h5>
                     <h6 class="my-3">Price : ${data.Price}</h6>
@@ -114,6 +115,7 @@ const removeFromCart = (id) => ( localStorage.setItem("cart",JSON.stringify(cart
 const viewCart = () => {
     selectShow.innerHTML = cart.map((data) => 
         `<tr>
+            <td><img height="50" width="100" src="./assets/images/item-image.jpg"></td>
             <td>${data.Name}</td>
             <td>${data.Desc}</td>
             <td>${data.Category}</td>
